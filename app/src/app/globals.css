@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B0E14;
+  --foreground: #F8FAFC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--foreground);
+  background: #0B0E14;
+  font-family: var(--font-sans), 'Jost', system-ui, sans-serif;
+  overflow-x: hidden;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessible focus ring per contemporary WCAG 2.2 AA standard */
+*:focus-visible {
+  outline: 2px solid #22C55E;
+  outline-offset: 2px;
+}
+
+/* Tabular number font utility */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Contemporary Bento Card Utilities - 0 Radius Brutalist Cyber Matrix */
+.bento-card {
+  background: #121622;
+  border: 1px solid #20283A;
+  border-radius: 0px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 10px 30px -5px rgba(34, 197, 94, 0.12);
+}
+
+.bento-subcard {
+  background: #161B27;
+  border: 1px solid #20283A;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+}
+
+.bento-subcard:hover {
+  background: #1B2132;
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+/* Cyber Matrix Emerald-Amber Gradients */
+.bg-contemporary-gradient {
+  background: linear-gradient(135deg, #22C55E 0%, #F59E0B 100%);
+}
+
+.text-contemporary-gradient {
+  background: linear-gradient(135deg, #4ADE80 0%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-contemporary-gradient {
+  border-image: linear-gradient(135deg, #22C55E, #F59E0B) 1;
+}
+
+/* Custom contemporary sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0E14;
+}
+
+/* Hide scrollbar for horizontal mobile nav strips */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Offset anchor targets so the sticky landing navbar never covers headings */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #20283A;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22C55E;
+}
