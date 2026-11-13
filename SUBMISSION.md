@@ -67,7 +67,7 @@ AI Sentinels run inside Intel SGX confidential enclaves (@near_ai Cloud). If an 
 • 14/14 passing Rust contract tests, 5/5 passing TEE tests
 
 💻 Public Repo: https://github.com/0xyudz/sogok-near
-🚀 Live App: https://sogok.vercel.app
+🚀 Live App: https://sogok-near.vercel.app
 
 What jailbreak prompt will crack Sentinel #0? Try it out and let us know your thoughts!
 

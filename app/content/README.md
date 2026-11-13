@@ -5,7 +5,7 @@ Stake $SOGOK to deploy hardened AI Sentinels, wage adversarial prompt injection 
 
 Built for **NEAR HACKATHON 2026** — Primary Track: **Memecoins With Mechanics** (`memecoins`); Sub-Tracks: **AI Security & Defense** (`security`), **Agent Economy** (`agents`), **Privacy & Private AI** (`privacy`).
 
-[![Live App](https://img.shields.io/badge/Live%20Terminal-sogok.vercel.app-22c55e?style=flat-square)](https://sogok.vercel.app)
+[![Live App](https://img.shields.io/badge/Live%20Terminal-sogok--near.vercel.app-22c55e?style=flat-square)](https://sogok-near.vercel.app)
 [![Demo Video](https://img.shields.io/badge/Demo%20Video-YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/sogok-near-demo)
 [![Technical Deep Dive](https://img.shields.io/badge/Blog-Deep%20Dive-10b981?style=flat-square)](docs/BLOG.md)
 [![Contract](https://img.shields.io/badge/NEAR%20Testnet-sogok--protocol.testnet-black?style=flat-square&logo=near)](https://testnet.nearblocks.io/address/sogok-protocol.testnet)
