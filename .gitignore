@@ -35,6 +35,13 @@ yarn-error.log*
 pnpm-debug.log*
 *.log
 
+# Video demo recordings
+*.mp4
+*.webm
+create-demo-clips.mjs
+record-clip4-and-stitch.mjs
+
+
 # OS & Editor files
 .DS_Store
 Thumbs.db
