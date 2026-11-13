@@ -415,7 +415,7 @@ curl -s -X POST https://rpc.testnet.near.org \
 ### 1. Installation
 ```bash
 # Clone the repository
-git clone https://github.com/sogok-protocol/sogok-near.git
+git clone https://github.com/0xyudz/sogok-near.git
 cd sogok-near
 
 # Install frontend dependencies

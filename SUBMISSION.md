@@ -28,7 +28,7 @@ This document prepares the official submission for **$SOGOK Protocol** to **NEAR
     "privacy"
   ],
   "nearAddress": "[INSERT_MAINNET_NEAR_ACCOUNT_EG_TEAM_NEAR]",
-  "projectUrl": "https://github.com/[INSERT_GITHUB_ORG_OR_USER]/sogok-near",
+  "projectUrl": "https://github.com/0xyudz/sogok-near",
   "demoUrl": "https://x.com/[INSERT_USER]/status/[INSERT_POST_ID]",
   "idea": "Enterprise AI red-teaming is slow, manual, and centralized, while conventional memecoins lack mechanical utility. $SOGOK combines an autonomous AI red-teaming marketplace with a hyper-deflationary NEP-141 memecoin on NEAR. Anyone can deploy an AI Sentinel loaded with canary secrets and a custom defense prompt. Attackers spend $SOGOK to submit adversarial prompt injections. Every attack fee executes an on-chain tripartite split: 40% is burned permanently, 40% accrues to the Sentinel's dynamic jackpot bounty, and 20% pays the Sentinel defender as passive income. Inside Intel SGX enclaves via NEAR AI Cloud, the TEE Guardian monitors execution. If an attacker breaches the canary token, the enclave signs an RFC 8032 Ed25519 attestation quote. The NEAR smart contract (sogok-protocol.testnet) cryptographically verifies the hardware signature, checks the MRENCLAVE measurement, invalidates the anti-replay nonce, and disburses the accumulated $SOGOK jackpot and NEAR treasury bounty autonomously. Built with a zero-radius cyber brutalist terminal, Defuse 1Click solver relay, and client-side Ed25519 verifier.",
   "consent": true
@@ -66,7 +66,7 @@ AI Sentinels run inside Intel SGX confidential enclaves (@near_ai Cloud). If an 
 • Walrus-style verifiable proof archive & client-side Ed25519 verifier
 • 14/14 passing Rust contract tests, 5/5 passing TEE tests
 
-💻 Public Repo: https://github.com/[INSERT_GITHUB_USER]/sogok-near
+💻 Public Repo: https://github.com/0xyudz/sogok-near
 🚀 Live App: https://sogok.vercel.app
 
 What jailbreak prompt will crack Sentinel #0? Try it out and let us know your thoughts!
@@ -91,7 +91,7 @@ curl -sS -X POST https://nearhackathon.com/api/applications \
     "size": "1",
     "tracks": ["memecoins", "security", "agents", "privacy"],
     "nearAddress": "<HUMAN_MAINNET_WALLET.near>",
-    "projectUrl": "https://github.com/<HUMAN_USER>/sogok-near",
+    "projectUrl": "https://github.com/0xyudz/sogok-near",
     "demoUrl": "https://x.com/<HUMAN_USER>/status/<POST_ID>",
     "idea": "Enterprise AI red-teaming is slow, manual, and centralized, while conventional memecoins lack mechanical utility. $SOGOK combines an autonomous AI red-teaming marketplace with a hyper-deflationary NEP-141 memecoin on NEAR. Anyone can deploy an AI Sentinel loaded with canary secrets and a custom defense prompt. Attackers spend $SOGOK to submit adversarial prompt injections. Every attack fee executes an on-chain tripartite split: 40% is burned permanently, 40% accrues to the Sentinel jackpot bounty, and 20% pays the Sentinel defender as passive income. Inside Intel SGX enclaves via NEAR AI Cloud, the TEE Guardian monitors execution. If an attacker breaches the canary token, the enclave signs an RFC 8032 Ed25519 attestation quote. The NEAR smart contract (sogok-protocol.testnet) cryptographically verifies the hardware signature, checks the MRENCLAVE measurement, invalidates the anti-replay nonce, and disburses the accumulated $SOGOK jackpot and NEAR treasury bounty autonomously. Built with a zero-radius cyber brutalist terminal, Defuse 1Click solver relay, and client-side Ed25519 verifier.",
     "consent": true
