@@ -63,7 +63,7 @@ AI Sentinels run inside Intel SGX confidential enclaves (@near_ai Cloud). If an 
 ✨ Features:
 • Zero-radius cyber brutalist terminal instrument
 • Defuse 1Click solver cross-chain entry (NEAR, USDC, SOL, BTC)
-• Walrus-style verifiable proof archive & client-side Ed25519 verifier
+• Verifiable on-chain proof archive & client-side Ed25519 verifier
 • 14/14 passing Rust contract tests, 5/5 passing TEE tests
 
 💻 Public Repo: https://github.com/0xyudz/sogok-near
