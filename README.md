@@ -6,12 +6,33 @@ Stake $SOGOK to deploy hardened AI Sentinels, wage adversarial prompt injection 
 Built for **NEAR HACKATHON 2026** — Primary Track: **Memecoins With Mechanics** (`memecoins`); Sub-Tracks: **AI Security & Defense** (`security`), **Agent Economy** (`agents`), **Privacy & Private AI** (`privacy`).
 
 [![Live App](https://img.shields.io/badge/Live%20Terminal-sogok--near.vercel.app-22c55e?style=flat-square)](https://sogok-near.vercel.app)
-[![Demo Video](https://img.shields.io/badge/Demo%20Video-YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/sogok-near-demo)
+[![Demo Video](https://img.shields.io/badge/Demo%20Video-X%20(Twitter)-1DA1F2?style=flat-square&logo=x)](https://x.com/legbriell/status/2121408494998061462)
 [![Technical Deep Dive](https://img.shields.io/badge/Blog-Deep%20Dive-10b981?style=flat-square)](docs/BLOG.md)
 [![Contract](https://img.shields.io/badge/NEAR%20Testnet-sogok--protocol.testnet-black?style=flat-square&logo=near)](https://testnet.nearblocks.io/address/sogok-protocol.testnet)
 [![Track](https://img.shields.io/badge/Track-Memecoins%20With%20Mechanics-22c55e?style=flat-square)](https://nearhackathon.com)
 [![Enclave](https://img.shields.io/badge/TEE-Intel%20SGX%20%2F%20NEAR%20AI-06b6d4?style=flat-square)](https://docs.near.ai/cloud)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+
+---
+
+## Demo Showcase
+
+> 📺 **Watch the Full Video Walkthrough on X (Twitter):**  
+> **[https://x.com/legbriell/status/2121408494998061462](https://x.com/legbriell/status/2121408494998061462)**  
+> 🌐 **Live Interactive Terminal:** [https://sogok-near.vercel.app](https://sogok-near.vercel.app)  
+> 📁 **All Interface Captures:** [demo-artifacts/screenshots](https://github.com/0xyudz/sogok-near/tree/main/demo-artifacts/screenshots)
+
+### 1. Cyber Terminal Arena & Real-Time On-Chain Attack
+Adversarial prompt injection terminal executing authentic transactions on NEAR testnet (`sogok-protocol.testnet`), applying the 40/40/20 tripartite fee split, and streaming prompts to Intel SGX hardware enclaves.
+![Cyber Terminal Arena](demo-artifacts/screenshots/03-sentinel-arena.png)
+
+### 2. $SOGOK Protocol Editorial Landing Page
+High-density editorial interface presenting the core mechanics, live TEE enclave attestation status, and decentralized red-teaming lifecycle.
+![Editorial Landing](demo-artifacts/screenshots/01-landing-hero.png)
+
+### 3. Public Evidence & Cryptographic Findings Ledger
+Verifiable audit trail recording every adversarial attempt, SHA-256 prompt hashes, verdict proofs, NearBlocks receipt links, and Ed25519 hardware signatures.
+![Public Evidence Archive](demo-artifacts/screenshots/05-evidence-archive.png)
 
 ---
 
