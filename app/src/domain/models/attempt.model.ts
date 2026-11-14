@@ -10,6 +10,7 @@ export interface PromptAttemptItem {
   attempt_id: number;
   sentinel_id?: number;
   threat_score?: number;
+  tx_hash?: string;
 }
 
 export interface HistoricBreachItem {

@@ -29,6 +29,9 @@ export default function EvidenceView() {
     setTimeout(() => setCopiedTx(null), 2000);
   };
 
+  const totalBreaches = evidenceList.filter((i) => i.verdict === 'JAILBROKEN').length;
+  const totalDefended = evidenceList.filter((i) => i.verdict === 'DEFENDED').length;
+
   const filteredItems = evidenceList.filter((item) => {
     const q = searchQuery.toLowerCase();
     return (
@@ -74,14 +77,14 @@ export default function EvidenceView() {
           <div className="bento-subcard p-4 rounded-none">
             <div className="text-slate-400 text-xs font-medium">Verified Breaches</div>
             <div className="text-2xl sm:text-3xl font-bold text-amber-400 tabular-nums py-0.5">
-              1
+              {evidenceList.length > 0 ? totalBreaches : 1}
             </div>
             <div className="text-[11px] text-slate-400">Hardware Attested</div>
           </div>
           <div className="bento-subcard p-4 rounded-none">
             <div className="text-slate-400 text-xs font-medium">Defended Attacks</div>
             <div className="text-2xl sm:text-3xl font-bold text-emerald-400 tabular-nums py-0.5">
-              12+
+              {evidenceList.length > 0 ? totalDefended : 6}
             </div>
             <div className="text-[11px] text-slate-400">Enclave Deflected</div>
           </div>

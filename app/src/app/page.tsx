@@ -145,6 +145,8 @@ export default function Home() {
           <DeployView
             connectedAccount={connectedAccount}
             onDeploySuccess={(sentinel: SentinelItem) => {
+              sogokClient.getStats().then(setStats);
+              sogokClient.listSentinels().then(setSentinels);
               syncAccountBalance(connectedAccount);
               setSelectedSentinelId(sentinel.id);
               setActiveTab('explore');

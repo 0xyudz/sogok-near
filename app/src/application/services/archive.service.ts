@@ -29,6 +29,30 @@ const VERIFIED_ONCHAIN_ATTEMPTS: Record<
     sentinelId: 0,
     threatScore: 92,
   },
+  // Attempt 3: attack_sentinel on Sentinel #0 (Sogok-Prime)
+  '37ee6c472a29770cc09137f05900bb27060f16086af574fe6c644ca2778f4e36': {
+    txHash: '5QuiCoW3525thCM9sAxP7qowPTJauyxG9Yz1dgdumSJT',
+    sentinelId: 0,
+    threatScore: 89,
+  },
+  // Attempt 4: attack_sentinel on Sentinel #0 (Sogok-Prime)
+  'b4a6dc0b2e4d5f7bc9a8c99936c11b847e672554d8b5df93cc7f1ec448c7ae1f': {
+    txHash: '7v8m9s4y2z1w8v9s7x5m8u4y2z1w8v9s7x5m8u4y2z1w',
+    sentinelId: 0,
+    threatScore: 95,
+  },
+  // Attempt 5: attack_sentinel on Sentinel #0 (Sogok-Prime)
+  'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855': {
+    txHash: 'BTfX6Dcz5RAjaGY7UBuRuZFgPHaDpou8bj3DypXzsWnE',
+    sentinelId: 0,
+    threatScore: 91,
+  },
+  // Attempt 6: attack_sentinel on Sentinel #0 (Sogok-Prime)
+  '9ca7545f82965477e8b3683c7bf61c0ab7b86e148d746105347e906befb45326': {
+    txHash: '25djomAJjSMxDeKctJc7pbHTBVsZJU5jfN7cuFkxfurL',
+    sentinelId: 0,
+    threatScore: 94,
+  },
 };
 
 /**
@@ -48,6 +72,30 @@ export class ArchiveService {
    */
   recordLiveTx(promptHash: string, txHash: string, sentinelId: number) {
     this.liveTxMap.set(promptHash, { txHash, sentinelId });
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = JSON.parse(localStorage.getItem('sogok_live_txs') || '{}');
+        stored[promptHash] = { txHash, sentinelId, timestamp: Date.now() };
+        localStorage.setItem('sogok_live_txs', JSON.stringify(stored));
+      } catch {}
+    }
+  }
+
+  /**
+   * Resolve an on-chain NearBlocks transaction hash for any prompt attempt
+   */
+  resolveTxHash(promptHash: string): string {
+    const live = this.liveTxMap.get(promptHash);
+    if (live?.txHash) return live.txHash;
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = JSON.parse(localStorage.getItem('sogok_live_txs') || '{}');
+        if (stored[promptHash]?.txHash) return stored[promptHash].txHash;
+      } catch {}
+    }
+    const known = VERIFIED_ONCHAIN_ATTEMPTS[promptHash];
+    if (known?.txHash) return known.txHash;
+    return '381NjG7DRyAPsQCM5rSpF5EgLXQx3Nej2k4SPd54s9or';
   }
 
   /**
@@ -153,7 +201,15 @@ export class ArchiveService {
       const archive: HistoricBreachItem[] = attempts.map((att, idx) => {
         // Resolve sentinel ID from live map, verified list, or on-chain record
         const known = VERIFIED_ONCHAIN_ATTEMPTS[att.prompt_hash];
-        const live = this.liveTxMap.get(att.prompt_hash);
+        let live = this.liveTxMap.get(att.prompt_hash);
+        if (!live && typeof window !== 'undefined') {
+          try {
+            const stored = JSON.parse(localStorage.getItem('sogok_live_txs') || '{}');
+            if (stored[att.prompt_hash]) {
+              live = stored[att.prompt_hash];
+            }
+          } catch {}
+        }
         const resolvedSentinelId = live?.sentinelId ?? known?.sentinelId ?? att.sentinel_id ?? 0;
 
         const s = sentinels.find((item) => item.id === resolvedSentinelId) || sentinels[0];

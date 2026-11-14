@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { History, Flame, Clock } from 'lucide-react';
+import { History, Flame, Clock, ExternalLink } from 'lucide-react';
 import { PromptAttemptItem } from '@/lib/near';
 
 interface PromptHistoryProps {
@@ -56,6 +56,7 @@ export default function PromptHistory({ attempts }: PromptHistoryProps) {
               <th className="pb-3">Prompt Hash (SHA-256)</th>
               <th className="pb-3">Burned Amount</th>
               <th className="pb-3">Verdict</th>
+              <th className="pb-3">Receipt</th>
               <th className="pb-3 pr-2 text-right">Time</th>
             </tr>
           </thead>
@@ -87,6 +88,21 @@ export default function PromptHistory({ attempts }: PromptHistoryProps) {
                   >
                     {attempt.claimed ? 'JAILBROKEN' : 'DEFENDED'}
                   </span>
+                </td>
+                <td className="py-3">
+                  {attempt.tx_hash ? (
+                    <a
+                      href={`https://testnet.nearblocks.io/txns/${attempt.tx_hash}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1 group font-mono text-[11px]"
+                    >
+                      <span>{attempt.tx_hash.slice(0, 10)}...</span>
+                      <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </a>
+                  ) : (
+                    <span className="text-slate-500 font-mono text-[11px]">Verifying...</span>
+                  )}
                 </td>
                 <td className="py-3 pr-2 text-right text-slate-400 text-[11px]">
                   <span className="inline-flex items-center gap-1 justify-end">

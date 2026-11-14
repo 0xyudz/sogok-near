@@ -58,8 +58,12 @@ export class SogokContractClient {
   getStats(): Promise<SogokStats> {
     return this.protocol.getStats();
   }
-  getRecentAttempts(): Promise<PromptAttemptItem[]> {
-    return this.protocol.getRecentAttempts();
+  async getRecentAttempts(): Promise<PromptAttemptItem[]> {
+    const attempts = await this.protocol.getRecentAttempts();
+    return attempts.map((att) => ({
+      ...att,
+      tx_hash: this.archive.resolveTxHash(att.prompt_hash),
+    }));
   }
   getAccountBalance(accountId: string): Promise<{ sogokBalance: string; nearBalance: string }> {
     return this.protocol.getAccountBalance(accountId);
